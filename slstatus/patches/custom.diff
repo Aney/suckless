@@ -1,0 +1,13 @@
+--- config.h	2020-10-22 14:13:06.337433964 +0100
++++ ../slstatus/config.h	2020-10-21 21:12:11.575131524 +0100
+@@ -63,5 +63,10 @@
+  */
+ static const struct arg args[] = {
+ 	/* function format          argument */
++	{ netspeed_rx, "%sB/s ",           "wls1" },
++	{ cpu_perc, "[CPU: %s%%] ",           NULL },
++	{ ram_perc, "[RAM: %s%%] ",           NULL },
++	{ battery_perc, "%s%% ",           "BAT0" },
++	{ battery_state, "%s ",           "BAT0" },
+ 	{ datetime, "%s",           "%F %T" },
+ };
