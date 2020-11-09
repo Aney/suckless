@@ -1,0 +1,11 @@
+--- dwm.c.old	2020-11-08 19:29:15.972124720 +0000
++++ dwm.c	2020-11-08 17:43:44.124525437 +0000
+@@ -633,6 +633,8 @@
+ Monitor *
+ createmon(void)
+ {
++	Bool gappx = True;
++	
+ 	Monitor *m;
+ 
+ 	m = ecalloc(1, sizeof(Monitor));

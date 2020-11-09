@@ -1,13 +1,24 @@
---- config.h	2020-10-22 14:13:06.337433964 +0100
-+++ ../slstatus/config.h	2020-10-21 21:12:11.575131524 +0100
-@@ -63,5 +63,10 @@
+--- slstatus_clean/config.h	2020-11-09 11:30:43.078294884 +0000
++++ slstatus/config.h	2020-11-09 11:29:58.125540606 +0000
+@@ -4,7 +4,7 @@
+ const unsigned int interval = 1000;
+ 
+ /* text to show if no value can be retrieved */
+-static const char unknown_str[] = "n/a";
++static const char unknown_str[] = "";
+ 
+ /* maximum output string length */
+ #define MAXLEN 2048
+@@ -63,5 +63,11 @@
   */
  static const struct arg args[] = {
  	/* function format          argument */
-+	{ netspeed_rx, "%sB/s ",           "wls1" },
+-	{ datetime, "%s",           "%F %T" },
++	{ run_command, "%s ",	"echo $(cat /home/nathan/recordings/.recording_status)" },
++	{ netspeed_rx, "%sB/s ",           "wlp2s0" },
 +	{ cpu_perc, "[CPU: %s%%] ",           NULL },
 +	{ ram_perc, "[RAM: %s%%] ",           NULL },
 +	{ battery_perc, "%s%% ",           "BAT0" },
 +	{ battery_state, "%s ",           "BAT0" },
- 	{ datetime, "%s",           "%F %T" },
++	{ datetime, "%s",           "%d/%m %R" },
  };
