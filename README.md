@@ -15,6 +15,7 @@ The patches will be kept as .diff files for easy reverts and changes, alongside 
 
 ### dwm
 
+#### swallow
 
 ### Slock
 
