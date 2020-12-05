@@ -9,11 +9,11 @@ Mod = alt
 ### Layouts
 
 t				= tabbed
-f				= fullscreen
+f|shift			= fullscreen
 m				= magnified
 u				= bottomstack
 o				= bottomstack vert
-f|shift			= floating
+f				= floating
 
 ### Padding
 
@@ -29,12 +29,10 @@ n				= newsboat
 v				= vim
 w				= brave
 w|Control		= firefox
-r				= display changer (WIP)
 g				= gimp
-c				= record
-c|Shift			= end record
-t|shift			= Torrent Client
-				= VM Manager
+t|control		= Torrent Client
+v|control		= VM Manager
+m|control		= Music (ncmpcpp)
 
 ## audio controls
 
@@ -52,20 +50,20 @@ p|shift			= pause/play (mpc pause, play, stop?)
 i|ctrl			= volume up
 d|ctrl			= volume down
 
-## other controls
-
-l				= slock
-'				= VPN (restart/start different services)
-;				= SSH (list and connect to vpn, or use an alternative IP)
-r				= xrandr monitors
-/				= dwm scripts menu
-y				= youtube-dl (with other dls and dl manager)
-
 ## screencaps, screenshots, etc (media making)
 
 c				= screencap
 c|shift			= end screencap
 s|shift			= screenshot (maim)
 s				= sreenshot selection (maim -s)
-s|ctrl			= slop screen selection
-				= screenkey (show keypresses)
+k|ctrl			= screenkey (show keypresses)
+
+## other controls
+
+l|ctrl			= slock
+'				= VPN (restart/start different services)
+;				= SSH (list and connect to vpn, or use an alternative IP)
+/				= dwm scripts menu
+y				= youtube-dl (with other dls and dl manager)
+r				= display changer (WIP)
+q				= kill client
