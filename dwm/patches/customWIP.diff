@@ -71,8 +71,8 @@
 +	/* Screencap Controls */
 +	{ MODKEY,                       XK_c,      spawn,          SHCMD("dmenu_record")  },
 +	{ MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("dmenu_record end") },
-+	{ MODKEY,                       XK_s,      spawn,          SHCMD("maim ~/pictures/screenshots/$(date +%d%m%Y-%H%M%S).jpg") },
-+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("maim -s ~/pictures/screenshots/$(date +%d%m%Y-%H%M%S).jpg") },
++	{ MODKEY,                       XK_s,      spawn,          SHCMD("maim ~/pictures/screenshots/$(date +%d%m%Y-%H%M%S).png") },
++	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("maim -s ~/pictures/screenshots/$(date +%d%m%Y-%H%M%S).png") },
 +	{ MODKEY|ControlMask,           XK_k,      spawn,          SHCMD("screenkey") },
 +	/* Other Controls */
 +	{ MODKEY|ControlMask,           XK_l,      spawn,          SHCMD("slock") },
