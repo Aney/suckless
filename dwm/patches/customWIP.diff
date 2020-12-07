@@ -53,7 +53,7 @@
 +	/* Spawn Controls                                                   */
  	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 -	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {SHCMD("$TERM") },
++	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("$TERM") },
 +	{ MODKEY,                       XK_e,      spawn,          {.v = filemanager } },
 +	{ MODKEY,                       XK_z,      spawn,          {.v = htop } },
 +	{ MODKEY|ShiftMask,             XK_z,      spawn,          {.v = neofetch } },
