@@ -25,6 +25,7 @@ reset padding	= =
 
 e				= lf
 z				= htop
+z|shift			= neofetch
 n				= newsboat
 v				= vim
 w				= brave
@@ -33,6 +34,7 @@ g				= gimp
 t|control		= Torrent Client
 v|control		= VM Manager
 m|control		= Music (ncmpcpp)
+e|control		= email (neomutt/thunderbird)
 
 ## audio controls
 
@@ -42,11 +44,11 @@ m|shift			= toggle mute (amixer -D pulse set Master toggle)
 
 ## music controls
 
-p|shift			= pause/play (mpc pause, play, stop?)
+p|shift			= pause/play (mpc toggle)
 ]				= skip song (mpv next)_
 [				= previous song (mpv prev)
-				= skip 5s forward (mpc seek +5)
-				= skip 5s backward
+]|shift			= skip 5s forward (mpc seek +5)
+[|shift			= skip 5s backward
 i|ctrl			= volume up
 d|ctrl			= volume down
 
