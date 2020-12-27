@@ -1,5 +1,5 @@
 --- ../slstatus_fresh/config.h	2020-11-22 11:15:48.156913353 +0000
-+++ config.h	2020-11-21 23:05:11.943492313 +0000
++++ config.h	2020-12-18 10:04:45.624896062 +0000
 @@ -4,7 +4,7 @@
  const unsigned int interval = 1000;
  
@@ -9,44 +9,19 @@
  
  /* maximum output string length */
  #define MAXLEN 2048
-@@ -63,5 +63,13 @@
+@@ -63,5 +63,14 @@
   */
  static const struct arg args[] = {
  	/* function format          argument */
 -	{ datetime, "%s",           "%F %T" },
 +	{ run_command, "%s ",	"echo $(cat /home/nathan/recordings/.recording_status)" },
-+	{ netspeed_tx, "+%sB/s ",           "wlp3s0" },
-+	{ netspeed_rx, "-%sB/s ",           "wlp3s0" },
-+	{ temp, "%sC ",		"/sys/class/thermal/thermal_zone0/temp" },
-+	{ cpu_perc, "[CPU: %s%%] ",           NULL },
-+	{ ram_used, "[RAM: %sB] ",           NULL },
-+	{ battery_perc, "%s%%",           "BAT0" },
-+	{ battery_state, "%s ",           "BAT0" },
-+	{ datetime, "%s",           "%d/%m %R" },
- };
---- ../slstatus_fresh/config.h	2020-11-22 11:15:48.156913353 +0000
-+++ config.h	2020-11-21 23:05:11.943492313 +0000
-@@ -4,7 +4,7 @@
- const unsigned int interval = 1000;
- 
- /* text to show if no value can be retrieved */
--static const char unknown_str[] = "n/a";
-+static const char unknown_str[] = "";
- 
- /* maximum output string length */
- #define MAXLEN 2048
-@@ -63,5 +63,13 @@
-  */
- static const struct arg args[] = {
- 	/* function format          argument */
--	{ datetime, "%s",           "%F %T" },
-+	{ run_command, "%s ",	"echo $(cat /home/nathan/recordings/.recording_status)" },
-+	{ netspeed_tx, "+%sB/s ",           "wlp3s0" },
-+	{ netspeed_rx, "-%sB/s ",           "wlp3s0" },
-+	{ temp, "%sC ",		"/sys/class/thermal/thermal_zone0/temp" },
-+	{ cpu_perc, "[CPU: %s%%] ",           NULL },
-+	{ ram_used, "[RAM: %sB] ",           NULL },
-+	{ battery_perc, "%s%%",           "BAT0" },
++/*	{ run_command, "%s ",	"echo $(cat /home/nathan/vpn)" }, */
++	{ netspeed_tx, "%sB/s ",           "wlp3s0" },
++	{ netspeed_rx, "%sB/s ",           "wlp3s0" },
++	{ temp, " %sC ",		"/sys/class/thermal/thermal_zone0/temp" },
++	{ cpu_perc, "[: %s%%] ",           NULL },
++	{ ram_used, "[: %sB] ",           NULL },
++	{ battery_perc, " %s%%",           "BAT0" },
 +	{ battery_state, "%s ",           "BAT0" },
 +	{ datetime, "%s",           "%d/%m %R" },
  };
